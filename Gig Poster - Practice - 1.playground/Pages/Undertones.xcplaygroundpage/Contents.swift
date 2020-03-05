@@ -29,6 +29,16 @@ let canvas = Canvas(width: 400, height: 600)
 let lightGrey = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
 let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
 
+// Grid
+canvas.lineColor = deepRed
+for a in 1...7 {
+    canvas.drawLine(from: Point(x: 50*a, y: 0), to: Point(x: 50*a, y: 600))
+}
+
+for b in 1...11 {
+    canvas.drawLine(from: Point(x: 0, y: 50*b), to: Point(x: 400, y: 50*b))
+}
+
 //move the origin
 canvas.translate(to: Point(x:0, y:400))
 
